@@ -47,7 +47,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
                 )
         );
 
-        bootstrap.addBundle(new AssetsBundle());
+        bootstrap.addBundle(new AssetsBundle("/assets", "/", "index.html"));
         bootstrap.addBundle(new MigrationsBundle<HelloWorldConfiguration>() {
             @Override
             public DataSourceFactory getDataSourceFactory(HelloWorldConfiguration configuration) {
